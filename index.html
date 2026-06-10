@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site educativo sobre a conexão entre o campo e a cidade para um desenvolvimento sustentável e equilibrado." />
+  <title>Campo & Cidade — Uma Conexão Vital</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== MENU FIXO ===== -->
+  <header class="nav-header" id="navHeader" role="banner">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Ir para o início">
+        <!-- SVG logo: folha + prédio -->
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+          <path d="M18 4 C10 4 4 12 6 20 C8 26 14 30 18 32 C22 30 28 26 30 20 C32 12 26 4 18 4Z" fill="var(--green-mid)" opacity="0.85"/>
+          <rect x="14" y="16" width="8" height="16" rx="1" fill="var(--earth-dark)" opacity="0.9"/>
+          <rect x="15" y="18" width="2" height="3" rx="0.5" fill="var(--gold)"/>
+          <rect x="19" y="18" width="2" height="3" rx="0.5" fill="var(--gold)"/>
+        </svg>
+        <span>Campo &amp; Cidade</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu" class="nav-menu" role="navigation" aria-label="Menu principal">
+        <a href="#conexao" class="nav-link">Conexão</a>
+        <a href="#sustentabilidade" class="nav-link">Sustentabilidade</a>
+        <a href="#tecnologia" class="nav-link">Tecnologia</a>
+        <a href="#quiz" class="nav-link">Quiz</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#impacto" class="nav-link">Impacto</a>
+        <a href="#futuro" class="nav-link">Futuro</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo claro/escuro">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></g></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="hero-parallax" id="heroParallax" aria-hidden="true">
+        <!-- Ilustração SVG campo + cidade -->
+        <svg class="hero-svg" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+          <!-- Céu -->
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--sky-top)"/>
+              <stop offset="100%" stop-color="var(--sky-bot)"/>
+            </linearGradient>
+            <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--ground-top)"/>
+              <stop offset="100%" stop-color="var(--ground-bot)"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="500" fill="url(#skyGrad)"/>
+          <!-- Nuvens -->
+          <ellipse cx="150" cy="100" rx="70" ry="30" fill="white" opacity="0.7"/>
+          <ellipse cx="200" cy="90" rx="50" ry="25" fill="white" opacity="0.7"/>
+          <ellipse cx="900" cy="80" rx="90" ry="35" fill="white" opacity="0.6"/>
+          <ellipse cx="960" cy="70" rx="60" ry="28" fill="white" opacity="0.6"/>
+          <!-- Sol -->
+          <circle cx="600" cy="80" r="45" fill="#FFD166" opacity="0.9"/>
+          <!-- Montanhas fundo -->
+          <polygon points="0,280 120,180 240,260 360,160 480,250 600,140 720,250 840,160 960,240 1080,170 1200,250 1200,320 0,320" fill="#6B9E5E" opacity="0.5"/>
+          <!-- Terra -->
+          <rect x="0" y="300" width="1200" height="200" fill="url(#groundGrad)"/>
+          <!-- Divisor campo-cidade (rio) -->
+          <path d="M595,300 C605,320 595,340 605,360 C615,380 600,400 600,500 L590,500 C590,400 575,380 585,360 C595,340 585,320 595,300Z" fill="#3A8FB7" opacity="0.7"/>
+          <!-- CAMPO (esquerda) -->
+          <!-- Árvores -->
+          <g fill="#4A7C59">
+            <circle cx="80" cy="295" r="28"/>
+            <circle cx="60" cy="308" r="22"/>
+            <circle cx="100" cy="308" r="22"/>
+            <rect x="74" y="310" width="12" height="30" fill="#6B4423"/>
+          </g>
+          <g fill="#5A9E6E">
+            <circle cx="200" cy="290" r="32"/>
+            <circle cx="178" cy="305" r="24"/>
+            <circle cx="222" cy="305" r="24"/>
+            <rect x="194" y="308" width="12" height="32" fill="#6B4423"/>
+          </g>
+          <!-- Plantações -->
+          <g fill="#6DBF67" opacity="0.8">
+            <rect x="260" y="310" width="6" height="20" rx="3"/>
+            <rect x="275" y="308" width="6" height="22" rx="3"/>
+            <rect x="290" y="312" width="6" height="18" rx="3"/>
+            <rect x="305" y="309" width="6" height="21" rx="3"/>
+            <rect x="320" y="311" width="6" height="19" rx="3"/>
+            <rect x="335" y="308" width="6" height="22" rx="3"/>
+            <rect x="350" y="312" width="6" height="18" rx="3"/>
+            <rect x="365" y="310" width="6" height="20" rx="3"/>
+            <rect x="380" y="309" width="6" height="21" rx="3"/>
+            <rect x="395" y="311" width="6" height="19" rx="3"/>
+            <rect x="410" y="308" width="6" height="22" rx="3"/>
+            <rect x="425" y="312" width="6" height="18" rx="3"/>
+            <rect x="440" y="310" width="6" height="20" rx="3"/>
+            <rect x="455" y="309" width="6" height="21" rx="3"/>
+            <rect x="470" y="311" width="6" height="19" rx="3"/>
+            <rect x="485" y="308" width="6" height="22" rx="3"/>
+            <rect x="500" y="312" width="6" height="18" rx="3"/>
+            <rect x="515" y="310" width="6" height="20" rx="3"/>
+          </g>
+          <!-- Casa rural -->
+          <polygon points="140,310 170,285 200,310" fill="#D4845A"/>
+          <rect x="143" y="310" width="54" height="28" fill="#F0C080"/>
+          <rect x="162" y="320" width="12" height="18" fill="#8B5E3C"/>
+          <!-- Celeiro -->
+          <rect x="420" y="300" width="60" height="40" fill="#C0392B" opacity="0.8"/>
+          <polygon points="415,300 450,275 485,300" fill="#922B21" opacity="0.8"/>
+          <!-- Trator SVG simples -->
+          <g transform="translate(300, 330)">
+            <rect x="5" y="5" width="50" height="25" rx="4" fill="#E67E22"/>
+            <rect x="40" y="2" width="20" height="20" rx="3" fill="#F39C12"/>
+            <circle cx="15" cy="32" r="10" fill="#333" stroke="#666" stroke-width="2"/>
+            <circle cx="50" cy="34" r="7" fill="#333" stroke="#666" stroke-width="2"/>
+            <circle cx="15" cy="32" r="4" fill="#666"/>
+            <circle cx="50" cy="34" r="3" fill="#666"/>
+          </g>
+          <!-- CIDADE (direita) -->
+          <!-- Prédios -->
+          <rect x="640" y="220" width="45" height="120" fill="#455A64"/>
+          <rect x="640" y="220" width="45" height="120" fill="#546E7A"/>
+          <g fill="#FFD54F" opacity="0.7">
+            <rect x="645" y="228" width="8" height="6" rx="1"/>
+            <rect x="657" y="228" width="8" height="6" rx="1"/>
+            <rect x="669" y="228" width="8" height="6" rx="1"/>
+            <rect x="645" y="242" width="8" height="6" rx="1"/>
+            <rect x="657" y="242" width="8" height="6" rx="1"/>
+            <rect x="669" y="242" width="8" height="6" rx="1"/>
+            <rect x="645" y="256" width="8" height="6" rx="1"/>
+            <rect x="669" y="256" width="8" height="6" rx="1"/>
+          </g>
+          <rect x="700" y="195" width="55" height="145" fill="#607D8B"/>
+          <g fill="#80DEEA" opacity="0.6">
+            <rect x="706" y="202" width="9" height="7" rx="1"/>
+            <rect x="719" y="202" width="9" height="7" rx="1"/>
+            <rect x="732" y="202" width="9" height="7" rx="1"/>
+            <rect x="706" y="218" width="9" height="7" rx="1"/>
+            <rect x="719" y="218" width="9" height="7" rx="1"/>
+            <rect x="732" y="218" width="9" height="7" rx="1"/>
+            <rect x="706" y="234" width="9" height="7" rx="1"/>
+            <rect x="732" y="234" width="9" height="7" rx="1"/>
+            <rect x="706" y="250" width="9" height="7" rx="1"/>
+            <rect x="719" y="250" width="9" height="7" rx="1"/>
+          </g>
+          <rect x="768" y="240" width="40" height="100" fill="#4A6572"/>
+          <g fill="#FFEB3B" opacity="0.6">
+            <rect x="773" y="248" width="7" height="5" rx="1"/>
+            <rect x="784" y="248" width="7" height="5" rx="1"/>
+            <rect x="795" y="248" width="7" height="5" rx="1"/>
+            <rect x="773" y="260" width="7" height="5" rx="1"/>
+            <rect x="795" y="260" width="7" height="5" rx="1"/>
+          </g>
+          <rect x="820" y="260" width="35" height="80" fill="#546E7A"/>
+          <rect x="870" y="230" width="50" height="110" fill="#607D8B"/>
+          <g fill="#B2EBF2" opacity="0.5">
+            <rect x="876" y="238" width="8" height="6"/><rect x="888" y="238" width="8" height="6"/>
+            <rect x="900" y="238" width="8" height="6"/><rect x="876" y="252" width="8" height="6"/>
+            <rect x="900" y="252" width="8" height="6"/><rect x="876" y="266" width="8" height="6"/>
+            <rect x="888" y="266" width="8" height="6"/><rect x="900" y="266" width="8" height="6"/>
+          </g>
+          <rect x="932" y="250" width="42" height="90" fill="#455A64"/>
+          <rect x="985" y="210" width="60" height="130" fill="#37474F"/>
+          <g fill="#FFF59D" opacity="0.5">
+            <rect x="991" y="218" width="9" height="7"/><rect x="1004" y="218" width="9" height="7"/>
+            <rect x="1017" y="218" width="9" height="7"/><rect x="1030" y="218" width="9" height="7"/>
+          </g>
+          <rect x="1057" y="240" width="38" height="100" fill="#546E7A"/>
+          <rect x="1107" y="260" width="93" height="80" fill="#607D8B"/>
+          <!-- Carro na cidade -->
+          <g transform="translate(760, 340)">
+            <rect x="0" y="8" width="52" height="18" rx="5" fill="#2E86C1"/>
+            <rect x="6" y="2" width="36" height="14" rx="4" fill="#5DADE2"/>
+            <circle cx="10" cy="28" r="7" fill="#1C2833"/>
+            <circle cx="42" cy="28" r="7" fill="#1C2833"/>
+            <circle cx="10" cy="28" r="3" fill="#AEB6BF"/>
+            <circle cx="42" cy="28" r="3" fill="#AEB6BF"/>
+          </g>
+          <!-- Estrada -->
+          <rect x="0" y="370" width="1200" height="18" fill="#795548" opacity="0.6"/>
+          <g fill="white" opacity="0.5">
+            <rect x="50" y="377" width="60" height="4" rx="2"/>
+            <rect x="180" y="377" width="60" height="4" rx="2"/>
+            <rect x="310" y="377" width="60" height="4" rx="2"/>
+            <rect x="440" y="377" width="60" height="4" rx="2"/>
+            <rect x="650" y="377" width="60" height="4" rx="2"/>
+            <rect x="780" y="377" width="60" height="4" rx="2"/>
+            <rect x="910" y="377" width="60" height="4" rx="2"/>
+            <rect x="1040" y="377" width="60" height="4" rx="2"/>
+          </g>
+          <!-- Turbinas eólicas -->
+          <g stroke="#BDBDBD" stroke-width="2" fill="#EEEEEE">
+            <line x1="130" y1="270" x2="130" y2="310"/>
+            <ellipse cx="130" cy="270" rx="3" ry="3" fill="#9E9E9E"/>
+            <line x1="130" y1="268" x2="120" y2="248"/>
+            <line x1="130" y1="268" x2="145" y2="255"/>
+            <line x1="130" y1="268" x2="115" y2="258"/>
+          </g>
+          <!-- Painel solar -->
+          <rect x="480" y="290" width="45" height="28" rx="2" fill="#1A237E" opacity="0.7" transform="rotate(-5,500,305)"/>
+          <g fill="#3949AB" opacity="0.8" transform="rotate(-5,500,305)">
+            <line x1="480" y1="299" x2="525" y2="299" stroke="#5C6BC0" stroke-width="1"/>
+            <line x1="480" y1="307" x2="525" y2="307" stroke="#5C6BC0" stroke-width="1"/>
+            <line x1="495" y1="290" x2="495" y2="318" stroke="#5C6BC0" stroke-width="1"/>
+            <line x1="510" y1="290" x2="510" y2="318" stroke="#5C6BC0" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Educação &amp; Sustentabilidade</p>
+        <h1 id="hero-titulo" class="hero-title">Campo &amp; Cidade:<br/>Uma Conexão Vital</h1>
+        <p class="hero-subtitle">Do solo fértil ao asfalto urbano, cada grão plantado e cada inovação criada tecem juntos o futuro que compartilhamos.</p>
+        <a href="#conexao" class="hero-btn" aria-label="Explorar o conteúdo do site">
+          Explorar
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ===== 2. CONEXÃO ===== -->
+    <section class="section conexao" id="conexao" aria-labelledby="conexao-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Por que importa</span>
+        <h2 id="conexao-titulo" class="section-title">A Importância da Conexão</h2>
+        <p class="section-desc">Campo e cidade não são opostos — são parceiros inseparáveis. O equilíbrio entre eles sustenta a vida de milhões de pessoas e o próprio planeta.</p>
+
+        <div class="cards-grid">
+          <!-- Card Campo -->
+          <article class="card card--campo" tabindex="0">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="22" fill="var(--green-light)" opacity="0.3"/>
+                <path d="M24 8 C16 8 10 16 12 24 C14 30 20 34 24 36 C28 34 34 30 36 24 C38 16 32 8 24 8Z" fill="var(--green-mid)"/>
+                <rect x="22" y="34" width="4" height="8" fill="var(--earth-mid)" rx="1"/>
+              </svg>
+            </div>
+            <h3 class="card-title">O Campo Alimenta</h3>
+            <p class="card-text">70% dos alimentos consumidos nas cidades vêm diretamente do campo. Grãos, frutas, verduras, carnes e laticínios percorrem centenas de quilômetros para chegar à mesa urbana.</p>
+            <ul class="card-list" role="list">
+              <li>Produção de alimentos frescos</li>
+              <li>Matérias-primas industriais</li>
+              <li>Recursos hídricos e ar puro</li>
+              <li>Biodiversidade e equilíbrio ecológico</li>
+            </ul>
+          </article>
+
+          <!-- Card Cidade -->
+          <article class="card card--cidade" tabindex="0">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="22" fill="var(--blue-light)" opacity="0.3"/>
+                <rect x="12" y="18" width="10" height="20" rx="1" fill="var(--blue-mid)"/>
+                <rect x="26" y="14" width="10" height="24" rx="1" fill="var(--blue-dark)"/>
+                <rect x="14" y="21" width="3" height="3" fill="var(--gold)" opacity="0.8"/>
+                <rect x="19" y="21" width="3" height="3" fill="var(--gold)" opacity="0.8"/>
+                <rect x="28" y="17" width="3" height="3" fill="var(--gold)" opacity="0.8"/>
+                <rect x="33" y="17" width="3" height="3" fill="var(--gold)" opacity="0.8"/>
+              </svg>
+            </div>
+            <h3 class="card-title">A Cidade Inova</h3>
+            <p class="card-text">Os centros urbanos concentram universidades, laboratórios e empresas que desenvolvem tecnologias que transformam a agricultura e melhoram a vida no campo.</p>
+            <ul class="card-list" role="list">
+              <li>Pesquisa e desenvolvimento tecnológico</li>
+              <li>Serviços de saúde e educação</li>
+              <li>Mercados e distribuição</li>
+              <li>Políticas públicas e gestão</li>
+            </ul>
+          </article>
+
+          <!-- Card Troca -->
+          <article class="card card--troca" tabindex="0">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="22" fill="var(--gold-light)" opacity="0.3"/>
+                <path d="M10 20 L20 20 L20 16 L30 22 L20 28 L20 24 L10 24Z" fill="var(--earth-mid)"/>
+                <path d="M38 28 L28 28 L28 32 L18 26 L28 20 L28 24 L38 24Z" fill="var(--green-mid)"/>
+              </svg>
+            </div>
+            <h3 class="card-title">A Troca é Recíproca</h3>
+            <p class="card-text">Não há desenvolvimento urbano sem o suprimento rural, nem prosperidade rural sem os mercados, tecnologias e serviços urbanos. Essa interdependência é a base da civilização.</p>
+            <ul class="card-list" role="list">
+              <li>Fluxo de pessoas e saberes</li>
+              <li>Cadeias produtivas integradas</li>
+              <li>Cultura e identidade compartilhadas</li>
+              <li>Resiliência frente a crises</li>
+            </ul>
+          </article>
+
+          <!-- Card Desafios -->
+          <article class="card card--desafio" tabindex="0">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="22" fill="var(--terra-light)" opacity="0.3"/>
+                <path d="M24 12 L26 20 L34 20 L28 25 L30 33 L24 28 L18 33 L20 25 L14 20 L22 20Z" fill="var(--earth-dark)"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Desafios Comuns</h3>
+            <p class="card-text">Mudanças climáticas, êxodo rural e insegurança alimentar são desafios que campo e cidade enfrentam juntos. A solução exige cooperação, planejamento e solidariedade.</p>
+            <ul class="card-list" role="list">
+              <li>Combate às mudanças climáticas</li>
+              <li>Redução do êxodo rural</li>
+              <li>Segurança alimentar universal</li>
+              <li>Infraestrutura e conectividade rural</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. SUSTENTABILIDADE ===== -->
+    <section class="section sustentabilidade" id="sustentabilidade" aria-labelledby="sust-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Meio Ambiente</span>
+        <h2 id="sust-titulo" class="section-title">Sustentabilidade em Prática</h2>
+        <p class="section-desc">A sustentabilidade não é um destino, mas uma jornada de escolhas diárias que moldam o presente e protegem o futuro.</p>
+
+        <div class="infographic">
+          <!-- Infográfico CSS/HTML -->
+          <div class="infographic-wheel" aria-label="Pilares da sustentabilidade">
+            <div class="wheel-center">
+              <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+                <circle cx="28" cy="28" r="26" fill="var(--green-mid)" opacity="0.2" stroke="var(--green-mid)" stroke-width="2"/>
+                <path d="M28 10 C20 10 14 18 16 26 C18 32 24 36 28 38 C32 36 38 32 40 26 C42 18 36 10 28 10Z" fill="var(--green-mid)"/>
+              </svg>
+              <span>Sustenta-<br/>bilidade</span>
+            </div>
+            <div class="wheel-item wheel-item--1" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4 C10 4 5 10 7 16 C9 21 13 24 16 26 C19 24 23 21 25 16 C27 10 22 4 16 4Z" fill="var(--green-mid)"/></svg>
+              </div>
+              <h4>Agrofloresta</h4>
+              <p>Integração de árvores, cultivos e animais em um mesmo espaço produtivo, restaurando a biodiversidade.</p>
+            </div>
+            <div class="wheel-item wheel-item--2" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M4 28 L16 8 L28 28Z" fill="var(--gold)" opacity="0.8"/><circle cx="16" cy="8" r="5" fill="var(--gold)"/></svg>
+              </div>
+              <h4>Energia Limpa</h4>
+              <p>Solar e eólica no campo reduzem emissões e criam autonomia energética para produtores rurais.</p>
+            </div>
+            <div class="wheel-item wheel-item--3" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4 C8 8 4 14 8 20 C12 26 20 28 24 22 C28 16 24 6 16 4Z" fill="var(--blue-mid)"/><path d="M10 22 C12 28 20 30 24 24" stroke="var(--blue-dark)" stroke-width="2" fill="none"/></svg>
+              </div>
+              <h4>Água &amp; Solo</h4>
+              <p>Manejo consciente da irrigação, rotação de culturas e reflorestamento de margens de rios.</p>
+            </div>
+            <div class="wheel-item wheel-item--4" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="var(--earth-mid)" stroke-width="2.5"/><path d="M10 16 L14 20 L22 12" stroke="var(--earth-mid)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Consumo Consciente</h4>
+              <p>Comprar local, reduzir desperdício e valorizar produtos orgânicos fortalece toda a cadeia.</p>
+            </div>
+            <div class="wheel-item wheel-item--5" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="14" width="20" height="14" rx="2" fill="var(--green-dark)" opacity="0.7"/><path d="M10 14 C10 8 22 8 22 14" fill="none" stroke="var(--green-dark)" stroke-width="2.5"/></svg>
+              </div>
+              <h4>Economia Circular</h4>
+              <p>Resíduos orgânicos urbanos viram adubo, que alimenta o campo, que alimenta a cidade — o ciclo fecha.</p>
+            </div>
+            <div class="wheel-item wheel-item--6" tabindex="0">
+              <div class="wheel-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="10" r="6" fill="var(--blue-mid)" opacity="0.6"/><rect x="10" y="18" width="12" height="10" rx="2" fill="var(--earth-mid)" opacity="0.7"/><line x1="16" y1="16" x2="16" y2="18" stroke="var(--earth-dark)" stroke-width="2"/></svg>
+              </div>
+              <h4>Educação Rural</h4>
+              <p>Jovens do campo com acesso a conhecimento técnico são os guardiões das próximas décadas.</p>
+            </div>
+          </div>
+
+          <!-- Benefícios -->
+          <div class="beneficios" aria-label="Benefícios ambientais e sociais">
+            <h3 class="beneficios-title">Benefícios Comprovados</h3>
+            <div class="beneficio-bar-group">
+              <div class="beneficio-item">
+                <div class="beneficio-label">
+                  <span>Redução de CO₂</span>
+                  <strong>68%</strong>
+                </div>
+                <div class="beneficio-bar-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                  <div class="beneficio-bar" data-width="68" style="background: var(--green-mid);"></div>
+                </div>
+              </div>
+              <div class="beneficio-item">
+                <div class="beneficio-label">
+                  <span>Economia de Água</span>
+                  <strong>45%</strong>
+                </div>
+                <div class="beneficio-bar-track" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                  <div class="beneficio-bar" data-width="45" style="background: var(--blue-mid);"></div>
+                </div>
+              </div>
+              <div class="beneficio-item">
+                <div class="beneficio-label">
+                  <span>Aumento de Biodiversidade</span>
+                  <strong>82%</strong>
+                </div>
+                <div class="beneficio-bar-track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                  <div class="beneficio-bar" data-width="82" style="background: var(--gold);"></div>
+                </div>
+              </div>
+              <div class="beneficio-item">
+                <div class="beneficio-label">
+                  <span>Renda do Agricultor</span>
+                  <strong>53%</strong>
+                </div>
+                <div class="beneficio-bar-track" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100">
+                  <div class="beneficio-bar" data-width="53" style="background: var(--earth-mid);"></div>
+                </div>
+              </div>
+            </div>
+            <p class="beneficio-nota">*Dados médios baseados em estudos da Embrapa e FAO sobre práticas sustentáveis no Brasil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. TECNOLOGIA ===== -->
+    <section class="section tecnologia" id="tecnologia" aria-labelledby="tec-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Inovação</span>
+        <h2 id="tec-titulo" class="section-title">Tecnologia no Campo</h2>
+        <p class="section-desc">A revolução digital chegou à lavoura. Drones, sensores e inteligência artificial estão transformando a forma como produzimos alimentos.</p>
+
+        <div class="timeline" id="timeline" role="list" aria-label="Linha do tempo da tecnologia agrícola">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="1950">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="1950">1950</time>
+              <h3>Mecanização Agrícola</h3>
+              <p>Tratores e colheitadeiras substituem parte do trabalho manual, aumentando a escala de produção e a eficiência no campo.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><rect x="2" y="12" width="20" height="12" rx="3" fill="var(--earth-mid)"/><rect x="18" y="8" width="12" height="10" rx="2" fill="var(--gold)"/><circle cx="7" cy="26" r="5" fill="#333"/><circle cx="24" cy="27" r="4" fill="#333"/></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="1970">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="1970">1970</time>
+              <h3>Revolução Verde</h3>
+              <p>Sementes melhoradas geneticamente, fertilizantes e pesticidas ampliam drasticamente a produtividade, alimentando bilhões de pessoas.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4 C8 6 4 14 8 22 C12 28 20 30 24 22 C28 14 24 4 16 4Z" fill="var(--green-mid)"/><line x1="16" y1="28" x2="16" y2="32" stroke="var(--earth-dark)" stroke-width="2"/></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="1990">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="1990">1990</time>
+              <h3>GPS na Agricultura</h3>
+              <p>O Sistema de Posicionamento Global chega ao campo, permitindo mapeamento preciso das lavouras e aplicação localizada de insumos.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="14" r="6" fill="none" stroke="var(--blue-mid)" stroke-width="2"/><circle cx="16" cy="14" r="2" fill="var(--blue-mid)"/><line x1="16" y1="2" x2="16" y2="8" stroke="var(--blue-mid)" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="26" stroke="var(--blue-mid)" stroke-width="2"/><line x1="2" y1="14" x2="8" y2="14" stroke="var(--blue-mid)" stroke-width="2"/><line x1="24" y1="14" x2="30" y2="14" stroke="var(--blue-mid)" stroke-width="2"/><path d="M16 20 L13 30 L16 27 L19 30Z" fill="var(--earth-dark)"/></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="2010">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2010">2010</time>
+              <h3>Drones e Sensores</h3>
+              <p>Veículos aéreos não tripulados e sensores IoT permitem monitorar plantações em tempo real, detectando doenças e pragas precocemente.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><rect x="12" y="12" width="8" height="8" rx="2" fill="var(--blue-dark)"/><circle cx="8" cy="8" r="4" fill="var(--blue-mid)"/><circle cx="24" cy="8" r="4" fill="var(--blue-mid)"/><circle cx="8" cy="24" r="4" fill="var(--blue-mid)"/><circle cx="24" cy="24" r="4" fill="var(--blue-mid)"/><line x1="8" y1="8" x2="12" y2="12" stroke="var(--blue-dark)" stroke-width="1.5"/><line x1="24" y1="8" x2="20" y2="12" stroke="var(--blue-dark)" stroke-width="1.5"/><line x1="8" y1="24" x2="12" y2="20" stroke="var(--blue-dark)" stroke-width="1.5"/><line x1="24" y1="24" x2="20" y2="20" stroke="var(--blue-dark)" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="2020">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2020">2020</time>
+              <h3>Inteligência Artificial</h3>
+              <p>Algoritmos de IA analisam dados climáticos, de solo e de mercado para otimizar o plantio, a colheita e a distribuição dos alimentos.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="3" fill="none" stroke="var(--gold)" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="var(--gold)"/><circle cx="20" cy="12" r="2" fill="var(--gold)"/><circle cx="16" cy="20" r="2" fill="var(--gold)"/><line x1="12" y1="12" x2="20" y2="12" stroke="var(--gold)" stroke-width="1.5"/><line x1="12" y1="12" x2="16" y2="20" stroke="var(--gold)" stroke-width="1.5"/><line x1="20" y1="12" x2="16" y2="20" stroke="var(--gold)" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem" tabindex="0" data-year="2025">
+            <div class="timeline-dot timeline-dot--active" aria-hidden="true"></div>
+            <div class="timeline-content timeline-content--active">
+              <time class="timeline-year" datetime="2025">Hoje</time>
+              <h3>Agro 5.0</h3>
+              <p>Robótica autônoma, blockchain para rastreabilidade alimentar e computação quântica para modelagem climática: o futuro da agricultura já chegou.</p>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10Z" fill="none" stroke="var(--green-mid)" stroke-width="2"/><circle cx="16" cy="16" r="5" fill="var(--green-mid)"/><path d="M16 11 L16 4M16 21 L16 28M11 16 L4 16M21 16 L28 16" stroke="var(--green-mid)" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. QUIZ ===== -->
+    <section class="section quiz-section" id="quiz" aria-labelledby="quiz-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Teste seus conhecimentos</span>
+        <h2 id="quiz-titulo" class="section-title">Quiz Interativo</h2>
+        <p class="section-desc">Quanto você sabe sobre a relação entre campo, cidade e sustentabilidade? Descubra agora!</p>
+
+        <div class="quiz-box" role="region" aria-live="polite" aria-label="Quiz interativo">
+          <div id="quizContainer">
+            <div class="quiz-progress" aria-label="Progresso do quiz">
+              <div class="quiz-progress-bar" id="quizProgressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="quiz-counter" id="quizCounter">Pergunta 1 de 8</p>
+            <h3 class="quiz-question" id="quizQuestion"></h3>
+            <div class="quiz-options" id="quizOptions" role="group" aria-labelledby="quizQuestion"></div>
+            <div class="quiz-feedback" id="quizFeedback" role="alert" aria-live="assertive"></div>
+            <button class="quiz-next-btn" id="quizNextBtn" style="display:none" aria-label="Próxima pergunta">Próxima →</button>
+          </div>
+          <div id="quizResult" style="display:none" class="quiz-result" role="region" aria-label="Resultado do quiz">
+            <div class="quiz-result-icon" aria-hidden="true" id="quizResultIcon"></div>
+            <h3 id="quizResultTitle"></h3>
+            <p id="quizResultText"></p>
+            <div class="quiz-score-display" aria-label="Pontuação">
+              <span id="quizScore"></span>
+              <span class="quiz-score-label">pontos</span>
+            </div>
+            <button class="quiz-restart-btn" id="quizRestartBtn">Jogar Novamente</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. GALERIA ===== -->
+    <section class="section galeria" id="galeria" aria-labelledby="gal-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Imagens</span>
+        <h2 id="gal-titulo" class="section-title">Galeria Ilustrativa</h2>
+        <p class="section-desc">Visualizações criadas para inspirar e educar sobre a beleza e a complexidade da relação entre campo e cidade.</p>
+
+        <div class="gallery-grid" role="list" aria-label="Galeria de ilustrações">
+          <!-- 8 cards de galeria com SVG -->
+          <button class="gallery-item" role="listitem" aria-label="Plantação de milho ao entardecer" data-title="Plantação ao Entardecer" data-desc="Campos dourados de milho simbolizam a abundância que o trabalho rural proporciona à sociedade.">
+            <div class="gallery-img gallery-img--1" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="sunset1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF6B35"/><stop offset="50%" stop-color="#FFB347"/><stop offset="100%" stop-color="#4A7C2F"/></linearGradient></defs>
+                <rect width="300" height="200" fill="url(#sunset1)"/>
+                <circle cx="150" cy="60" r="35" fill="#FFD700" opacity="0.9"/>
+                <g fill="#2D5A1B">
+                  <rect x="30" y="110" width="8" height="60" rx="2"/>
+                  <ellipse cx="34" cy="108" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="60" y="105" width="8" height="65" rx="2"/>
+                  <ellipse cx="64" cy="103" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="90" y="112" width="8" height="58" rx="2"/>
+                  <ellipse cx="94" cy="110" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="120" y="108" width="8" height="62" rx="2"/>
+                  <ellipse cx="124" cy="106" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="150" y="110" width="8" height="60" rx="2"/>
+                  <ellipse cx="154" cy="108" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="180" y="106" width="8" height="64" rx="2"/>
+                  <ellipse cx="184" cy="104" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="210" y="111" width="8" height="59" rx="2"/>
+                  <ellipse cx="214" cy="109" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="240" y="107" width="8" height="63" rx="2"/>
+                  <ellipse cx="244" cy="105" rx="10" ry="18" fill="#4A8C2A"/>
+                  <rect x="270" y="109" width="8" height="61" rx="2"/>
+                  <ellipse cx="274" cy="107" rx="10" ry="18" fill="#4A8C2A"/>
+                </g>
+                <rect x="0" y="155" width="300" height="45" fill="#5C8A3C" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="gallery-caption">Plantação ao Entardecer</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Skyline urbano ao amanhecer" data-title="Skyline Urbano" data-desc="A cidade desperta com luzes e movimento, demandando os alimentos que só o campo pode fornecer.">
+            <div class="gallery-img gallery-img--2" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A1A2E"/><stop offset="60%" stop-color="#16213E"/><stop offset="100%" stop-color="#0F3460"/></linearGradient></defs>
+                <rect width="300" height="200" fill="url(#dawn)"/>
+                <circle cx="150" cy="170" r="50" fill="#FF6B35" opacity="0.3"/>
+                <g fill="#0D2137">
+                  <rect x="20" y="90" width="30" height="110"/>
+                  <rect x="60" y="70" width="25" height="130"/>
+                  <rect x="95" y="100" width="20" height="100"/>
+                  <rect x="125" y="60" width="35" height="140"/>
+                  <rect x="170" y="80" width="28" height="120"/>
+                  <rect x="208" y="50" width="40" height="150"/>
+                  <rect x="258" y="85" width="22" height="115"/>
+                </g>
+                <g fill="#FFD700" opacity="0.7">
+                  <rect x="24" y="95" width="5" height="4"/><rect x="34" y="95" width="5" height="4"/>
+                  <rect x="64" y="75" width="5" height="4"/><rect x="74" y="75" width="5" height="4"/>
+                  <rect x="128" y="65" width="6" height="4"/><rect x="138" y="65" width="6" height="4"/>
+                  <rect x="149" y="65" width="6" height="4"/>
+                  <rect x="212" y="55" width="7" height="5"/><rect x="223" y="55" width="7" height="5"/>
+                  <rect x="234" y="55" width="7" height="5"/>
+                  <rect x="212" y="68" width="7" height="5"/><rect x="234" y="68" width="7" height="5"/>
+                </g>
+                <rect x="0" y="185" width="300" height="15" fill="#0A1628"/>
+                <g fill="#6C7A8A" opacity="0.4">
+                  <rect x="30" y="185" width="30" height="3"/><rect x="80" y="185" width="30" height="3"/>
+                  <rect x="140" y="185" width="30" height="3"/><rect x="200" y="185" width="30" height="3"/>
+                </g>
+              </svg>
+            </div>
+            <div class="gallery-caption">Skyline Urbano</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Rio cortando a paisagem" data-title="O Rio que Une" data-desc="Os rios são os caminhos naturais que conectam campo e cidade, fornecendo água, vida e fertilidade.">
+            <div class="gallery-img gallery-img--3" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="100%" stop-color="#E0F4FF"/></linearGradient></defs>
+                <rect width="300" height="200" fill="url(#sky3)"/>
+                <ellipse cx="80" cy="60" rx="50" ry="20" fill="white" opacity="0.8"/>
+                <ellipse cx="220" cy="45" rx="60" ry="22" fill="white" opacity="0.7"/>
+                <rect x="0" y="120" width="300" height="80" fill="#4A8C3F"/>
+                <path d="M0,135 C50,125 100,145 150,130 C200,115 250,140 300,128 L300,200 L0,200Z" fill="#3A7A32"/>
+                <path d="M70,120 C80,90 90,80 100,120 L95,200 L75,200Z" fill="#2E5C28" opacity="0.8"/>
+                <path d="M80,120 C90,85 100,75 110,120" fill="#264E22" opacity="0.6"/>
+                <!-- Rio -->
+                <path d="M0,152 C60,145 120,160 180,148 C240,136 280,155 300,148 L300,168 C270,175 220,158 160,170 C100,182 50,165 0,172Z" fill="#3A8FB7" opacity="0.85"/>
+                <path d="M0,155 C70,148 140,163 200,151 C250,142 280,158 300,152" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="gallery-caption">O Rio que Une</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Estufa com produção hidropônica" data-title="Estufa do Futuro" data-desc="Estufas tecnológicas produzem alimentos em espaços reduzidos, aproximando a produção das cidades.">
+            <div class="gallery-img gallery-img--4" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="200" fill="#E8F5E9"/>
+                <path d="M40,180 L40,80 L150,40 L260,80 L260,180Z" fill="none" stroke="#81C784" stroke-width="3"/>
+                <path d="M40,80 L150,40 L260,80" fill="rgba(129,199,132,0.15)"/>
+                <rect x="40" y="80" width="220" height="100" fill="rgba(129,199,132,0.1)"/>
+                <!-- Fileiras hidropônicas -->
+                <g fill="#2E7D32">
+                  <rect x="60" y="100" width="180" height="4" rx="2" fill="#A5D6A7"/>
+                  <rect x="60" y="120" width="180" height="4" rx="2" fill="#A5D6A7"/>
+                  <rect x="60" y="140" width="180" height="4" rx="2" fill="#A5D6A7"/>
+                  <rect x="60" y="160" width="180" height="4" rx="2" fill="#A5D6A7"/>
+                </g>
+                <!-- Plantinhas -->
+                <g fill="#388E3C">
+                  <path d="M75,98 C72,90 78,84 82,90 C86,84 90,90 88,98"/>
+                  <path d="M105,98 C102,90 108,84 112,90 C116,84 120,90 118,98"/>
+                  <path d="M135,118 C132,110 138,104 142,110 C146,104 150,110 148,118"/>
+                  <path d="M165,118 C162,110 168,104 172,110 C176,104 180,110 178,118"/>
+                  <path d="M90,138 C87,130 93,124 97,130 C101,124 105,130 103,138"/>
+                  <path d="M195,138 C192,130 198,124 202,130 C206,124 210,130 208,138"/>
+                </g>
+                <!-- Sol -->
+                <circle cx="240" cy="60" r="20" fill="#FFF176" opacity="0.8"/>
+                <line x1="240" y1="35" x2="240" y2="30" stroke="#FFF176" stroke-width="2"/>
+                <line x1="255" y1="40" x2="259" y2="36" stroke="#FFF176" stroke-width="2"/>
+                <line x1="260" y1="55" x2="265" y2="55" stroke="#FFF176" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="gallery-caption">Estufa do Futuro</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Turbinas eólicas no campo" data-title="Energia do Vento" data-desc="As turbinas eólicas transformam o vento dos campos em eletricidade para abastecer cidades inteiras.">
+            <div class="gallery-img gallery-img--5" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="windSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B3E5FC"/><stop offset="100%" stop-color="#E3F2FD"/></linearGradient></defs>
+                <rect width="300" height="200" fill="url(#windSky)"/>
+                <ellipse cx="100" cy="50" rx="60" ry="22" fill="white" opacity="0.9"/>
+                <ellipse cx="230" cy="40" rx="50" ry="18" fill="white" opacity="0.8"/>
+                <rect x="0" y="150" width="300" height="50" fill="#66BB6A"/>
+                <path d="M0,155 C60,148 120,162 180,150 C240,138 280,155 300,148 L300,200 L0,200Z" fill="#4CAF50" opacity="0.7"/>
+                <!-- Turbinas -->
+                <g stroke="#90A4AE" stroke-width="2" fill="#B0BEC5">
+                  <line x1="80" y1="155" x2="80" y2="80"/>
+                  <circle cx="80" cy="80" r="4" fill="#78909C"/>
+                  <line x1="80" y1="76" x2="60" y2="55"/>
+                  <line x1="80" y1="76" x2="96" y2="58"/>
+                  <line x1="80" y1="76" x2="65" y2="95"/>
+                </g>
+                <g stroke="#90A4AE" stroke-width="2" fill="#B0BEC5">
+                  <line x1="160" y1="155" x2="160" y2="70"/>
+                  <circle cx="160" cy="70" r="5" fill="#78909C"/>
+                  <line x1="160" y1="65" x2="136" y2="42"/>
+                  <line x1="160" y1="65" x2="180" y2="46"/>
+                  <line x1="160" y1="65" x2="145" y2="88"/>
+                </g>
+                <g stroke="#90A4AE" stroke-width="2" fill="#B0BEC5">
+                  <line x1="240" y1="155" x2="240" y2="85"/>
+                  <circle cx="240" cy="85" r="4" fill="#78909C"/>
+                  <line x1="240" y1="81" x2="220" y2="62"/>
+                  <line x1="240" y1="81" x2="256" y2="64"/>
+                  <line x1="240" y1="81" x2="226" y2="100"/>
+                </g>
+              </svg>
+            </div>
+            <div class="gallery-caption">Energia do Vento</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Mercado de alimentos frescos" data-title="Feira Orgânica" data-desc="As feiras livres são o ponto de encontro entre quem produz no campo e quem consome na cidade.">
+            <div class="gallery-img gallery-img--6" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="200" fill="#FFF8E1"/>
+                <!-- Tendas -->
+                <polygon points="0,80 75,40 150,80" fill="#E53935" opacity="0.85"/>
+                <polygon points="150,80 225,40 300,80" fill="#1565C0" opacity="0.85"/>
+                <rect x="0" y="80" width="150" height="80" fill="#FFCDD2" opacity="0.6"/>
+                <rect x="150" y="80" width="150" height="80" fill="#BBDEFB" opacity="0.6"/>
+                <!-- Produtos -->
+                <circle cx="30" cy="120" r="10" fill="#FF7043"/>
+                <circle cx="55" cy="118" r="8" fill="#FF5722"/>
+                <circle cx="78" cy="121" r="10" fill="#F4511E"/>
+                <ellipse cx="105" cy="120" rx="12" ry="8" fill="#FFD600"/>
+                <ellipse cx="130" cy="120" rx="12" ry="8" fill="#FFD600"/>
+                <circle cx="170" cy="118" r="9" fill="#66BB6A"/>
+                <circle cx="193" cy="120" r="11" fill="#43A047"/>
+                <circle cx="218" cy="118" r="9" fill="#2E7D32"/>
+                <ellipse cx="245" cy="120" rx="13" ry="9" fill="#8D6E63"/>
+                <ellipse cx="272" cy="120" rx="11" ry="9" fill="#795548"/>
+                <!-- Pessoas estilizadas -->
+                <g fill="#5D4037">
+                  <circle cx="90" cy="148" r="6"/>
+                  <rect x="86" y="154" width="8" height="18" rx="2"/>
+                  <circle cx="200" cy="148" r="6"/>
+                  <rect x="196" y="154" width="8" height="18" rx="2"/>
+                </g>
+                <!-- Chão -->
+                <rect x="0" y="172" width="300" height="28" fill="#D7CCC8"/>
+              </svg>
+            </div>
+            <div class="gallery-caption">Feira Orgânica</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Drone sobrevoando plantação" data-title="Drone Agrícola" data-desc="Drones monitoram e tratam lavouras com precisão, economizando recursos e aumentando a produtividade.">
+            <div class="gallery-img gallery-img--7" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="droneSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E1F5FE"/><stop offset="100%" stop-color="#B3E5FC"/></linearGradient></defs>
+                <rect width="300" height="200" fill="url(#droneSky)"/>
+                <rect x="0" y="130" width="300" height="70" fill="#558B2F"/>
+                <g fill="#33691E" opacity="0.6">
+                  <rect x="10" y="140" width="6" height="25" rx="2"/><rect x="30" y="135" width="6" height="30" rx="2"/>
+                  <rect x="50" y="142" width="6" height="23" rx="2"/><rect x="70" y="136" width="6" height="29" rx="2"/>
+                  <rect x="90" y="140" width="6" height="25" rx="2"/><rect x="110" y="137" width="6" height="28" rx="2"/>
+                  <rect x="130" y="141" width="6" height="24" rx="2"/><rect x="150" y="135" width="6" height="30" rx="2"/>
+                  <rect x="170" y="139" width="6" height="26" rx="2"/><rect x="190" y="136" width="6" height="29" rx="2"/>
+                  <rect x="210" y="141" width="6" height="24" rx="2"/><rect x="230" y="137" width="6" height="28" rx="2"/>
+                  <rect x="250" y="140" width="6" height="25" rx="2"/><rect x="270" y="138" width="6" height="27" rx="2"/>
+                </g>
+                <!-- Drone -->
+                <g transform="translate(130, 55)">
+                  <rect x="10" y="10" width="20" height="12" rx="3" fill="#37474F"/>
+                  <rect x="14" y="13" width="12" height="6" rx="2" fill="#546E7A"/>
+                  <circle cx="5" cy="8" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+                  <circle cx="35" cy="8" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+                  <circle cx="5" cy="22" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+                  <circle cx="35" cy="22" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+                  <line x1="5" y1="8" x2="10" y2="12" stroke="#607D8B" stroke-width="1.5"/>
+                  <line x1="35" y1="8" x2="30" y2="12" stroke="#607D8B" stroke-width="1.5"/>
+                  <line x1="5" y1="22" x2="10" y2="20" stroke="#607D8B" stroke-width="1.5"/>
+                  <line x1="35" y1="22" x2="30" y2="20" stroke="#607D8B" stroke-width="1.5"/>
+                  <!-- Camera -->
+                  <rect x="17" y="22" width="6" height="5" rx="1" fill="#212121"/>
+                  <circle cx="20" cy="24.5" r="2" fill="#1565C0"/>
+                </g>
+                <!-- Feixe de luz do drone -->
+                <path d="M150,80 L130,130 L170,130Z" fill="#FFF176" opacity="0.2"/>
+                <!-- Sinal de conexão -->
+                <g stroke="#29B6F6" stroke-width="1.5" fill="none" opacity="0.6">
+                  <path d="M155,60 C160,55 165,55 170,60"/>
+                  <path d="M152,56 C159,49 168,49 175,56"/>
+                </g>
+              </svg>
+            </div>
+            <div class="gallery-caption">Drone Agrícola</div>
+          </button>
+
+          <button class="gallery-item" role="listitem" aria-label="Compostagem e reciclagem" data-title="Ciclo Orgânico" data-desc="A compostagem fecha o ciclo: resíduos urbanos se transformam no adubo que nutre as plantações do campo.">
+            <div class="gallery-img gallery-img--8" aria-hidden="true">
+              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="200" fill="#F1F8E9"/>
+                <!-- Setas de ciclo -->
+                <path d="M150,30 C200,30 230,70 230,120 C230,150 210,170 190,175" stroke="#66BB6A" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <path d="M190,175 C160,185 120,185 100,170 C75,155 70,130 70,100 C70,70 95,40 130,32" stroke="#43A047" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <!-- Setas de ponta -->
+                <polygon points="130,22 120,36 142,36" fill="#43A047"/>
+                <polygon points="192,182 182,170 196,167" fill="#66BB6A"/>
+                <!-- Ícones no ciclo -->
+                <!-- Resíduo urbano -->
+                <g transform="translate(50, 88)">
+                  <rect x="0" y="4" width="28" height="22" rx="3" fill="#FF8F00" opacity="0.8"/>
+                  <rect x="6" y="0" width="16" height="6" rx="1" fill="#F57F17"/>
+                  <rect x="4" y="10" width="5" height="12" fill="#FFF9C4" opacity="0.6"/>
+                  <rect x="11" y="10" width="5" height="12" fill="#FFF9C4" opacity="0.6"/>
+                  <rect x="18" y="10" width="5" height="12" fill="#FFF9C4" opacity="0.6"/>
+                </g>
+                <!-- Compostagem -->
+                <g transform="translate(130,155)">
+                  <ellipse cx="18" cy="14" rx="18" ry="10" fill="#8D6E63"/>
+                  <path d="M5,13 C8,8 14,6 18,9 C22,6 28,8 31,13" stroke="#6D4C41" stroke-width="1.5" fill="none"/>
+                  <path d="M10,10 C12,5 16,3 18,6" stroke="#4CAF50" stroke-width="2" fill="none"/>
+                  <path d="M22,10 C24,5 20,2 18,6" stroke="#4CAF50" stroke-width="2" fill="none"/>
+                </g>
+                <!-- Planta crescendo -->
+                <g transform="translate(210, 80)">
+                  <rect x="12" y="18" width="6" height="20" fill="#5D4037" rx="1"/>
+                  <path d="M15,20 C8,14 6,6 12,4 C14,8 14,14 15,18" fill="#4CAF50"/>
+                  <path d="M15,24 C22,18 24,10 18,8 C16,12 16,18 15,24" fill="#66BB6A"/>
+                </g>
+                <!-- Alimento na mesa -->
+                <g transform="translate(192,20)">
+                  <ellipse cx="18" cy="24" rx="22" ry="5" fill="#BCAAA4"/>
+                  <ellipse cx="18" cy="20" rx="16" ry="12" fill="#FFCCBC" opacity="0.9"/>
+                  <ellipse cx="18" cy="18" rx="10" ry="4" fill="#FF7043" opacity="0.7"/>
+                  <path d="M8,14 C10,10 14,8 18,10 C22,8 26,10 28,14" fill="#4CAF50" opacity="0.8"/>
+                </g>
+                <text x="150" y="108" text-anchor="middle" font-size="11" fill="#388E3C" font-family="sans-serif" font-weight="bold">Ciclo</text>
+                <text x="150" y="120" text-anchor="middle" font-size="11" fill="#388E3C" font-family="sans-serif" font-weight="bold">Orgânico</text>
+              </svg>
+            </div>
+            <div class="gallery-caption">Ciclo Orgânico</div>
+          </button>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" style="display:none">
+          <div class="lightbox-overlay" id="lightboxOverlay"></div>
+          <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Fechar visualização">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </button>
+            <div id="lightboxImg" class="lightbox-img-wrap"></div>
+            <h3 id="lightboxTitle" class="lightbox-title"></h3>
+            <p id="lightboxDesc" class="lightbox-desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. IMPACTO ===== -->
+    <section class="section impacto" id="impacto" aria-labelledby="imp-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Em Números</span>
+        <h2 id="imp-titulo" class="section-title">Impacto na Sociedade</h2>
+        <p class="section-desc">Dados que revelam o quanto a parceria entre campo e cidade define a realidade de bilhões de pessoas.</p>
+
+        <div class="stats-grid" aria-label="Estatísticas de impacto">
+          <div class="stat-card" data-target="33" data-suffix="%" aria-label="33 por cento da população brasileira vive no campo">
+            <div class="stat-number" id="stat1">0%</div>
+            <div class="stat-label">da população brasileira vive no campo</div>
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40"><path d="M20 6 C12 6 6 14 8 22 C10 28 16 32 20 34 C24 32 30 28 32 22 C34 14 28 6 20 6Z" fill="var(--green-mid)" opacity="0.7"/></svg>
+            </div>
+          </div>
+          <div class="stat-card" data-target="70" data-suffix="%" aria-label="70 por cento dos alimentos vêm do campo">
+            <div class="stat-number" id="stat2">0%</div>
+            <div class="stat-label">dos alimentos consumidos nas cidades vêm do campo</div>
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40"><ellipse cx="20" cy="22" rx="14" ry="10" fill="var(--gold)" opacity="0.7"/><path d="M14,20 C16,14 24,14 26,20" fill="var(--green-mid)" opacity="0.8"/></svg>
+            </div>
+          </div>
+          <div class="stat-card" data-target="26" data-suffix="%" aria-label="26 por cento do PIB brasileiro é do agronegócio">
+            <div class="stat-number" id="stat3">0%</div>
+            <div class="stat-label">do PIB brasileiro é gerado pelo agronegócio</div>
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40"><rect x="6" y="22" width="6" height="12" fill="var(--blue-mid)" opacity="0.7"/><rect x="17" y="16" width="6" height="18" fill="var(--blue-mid)" opacity="0.8"/><rect x="28" y="10" width="6" height="24" fill="var(--blue-mid)"/></svg>
+            </div>
+          </div>
+          <div class="stat-card" data-target="10" data-suffix="Mi" aria-label="10 milhões de famílias dependem da agricultura familiar">
+            <div class="stat-number" id="stat4">0Mi</div>
+            <div class="stat-label">de famílias dependem da agricultura familiar no Brasil</div>
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="12" r="7" fill="var(--earth-mid)" opacity="0.7"/><path d="M8,34 C8,26 32,26 32,34Z" fill="var(--earth-mid)" opacity="0.7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico de barras HTML/CSS/JS -->
+        <div class="chart-wrap">
+          <h3 class="chart-title">Produção Agrícola Brasileira (Mt)</h3>
+          <div class="chart" role="img" aria-label="Gráfico de barras mostrando produção agrícola de 2018 a 2023">
+            <div class="chart-bars" id="chartBars">
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="83" style="--bar-color: var(--green-mid);" aria-label="2018: 83 milhões de toneladas"></div>
+                <div class="chart-bar-label">2018</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="88" style="--bar-color: var(--blue-mid);" aria-label="2019: 88 milhões de toneladas"></div>
+                <div class="chart-bar-label">2019</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="94" style="--bar-color: var(--gold);" aria-label="2020: 94 milhões de toneladas"></div>
+                <div class="chart-bar-label">2020</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="100" style="--bar-color: var(--earth-mid);" aria-label="2021: 100 milhões de toneladas"></div>
+                <div class="chart-bar-label">2021</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="96" style="--bar-color: var(--green-dark);" aria-label="2022: 96 milhões de toneladas"></div>
+                <div class="chart-bar-label">2022</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-value="110" style="--bar-color: var(--green-mid);" aria-label="2023: 110 milhões de toneladas"></div>
+                <div class="chart-bar-label">2023</div>
+              </div>
+            </div>
+            <div class="chart-axis">
+              <span>0</span><span>25</span><span>50</span><span>75</span><span>100+</span>
+            </div>
+          </div>
+          <p class="chart-note">*Dados estimados com base em relatórios da Conab/MAPA. Mt = Milhões de toneladas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. FUTURO ===== -->
+    <section class="section futuro" id="futuro" aria-labelledby="fut-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Ideias &amp; Ações</span>
+        <h2 id="fut-titulo" class="section-title">Ideias para o Futuro</h2>
+        <p class="section-desc">Pequenas ações, grandes transformações. Veja o que cada um de nós pode fazer para fortalecer a parceria entre campo e cidade.</p>
+
+        <div class="future-grid">
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--green-light)" opacity="0.4"/>
+                  <path d="M26 10 C18 10 12 18 14 26 C16 32 22 36 26 38 C30 36 36 32 38 26 C40 18 34 10 26 10Z" fill="var(--green-mid)"/>
+                  <rect x="24" y="36" width="4" height="8" fill="var(--earth-dark)" rx="1"/>
+                </svg>
+              </div>
+              <h3>Comer Local</h3>
+              <p>Priorize alimentos produzidos perto de você. Cada compra de um produtor local é um voto pelo campo e por emissões menores de transporte.</p>
+            </div>
+            <div class="future-card-tag">Para todos</div>
+          </article>
+
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--blue-light)" opacity="0.4"/>
+                  <rect x="16" y="20" width="20" height="16" rx="2" fill="var(--blue-mid)" opacity="0.7"/>
+                  <rect x="22" y="16" width="8" height="6" rx="1" fill="var(--blue-dark)"/>
+                  <line x1="20" y1="26" x2="32" y2="26" stroke="white" stroke-width="1.5"/>
+                  <line x1="20" y1="30" x2="32" y2="30" stroke="white" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3>Conectividade Rural</h3>
+              <p>Apoiar políticas de internet banda larga no campo reduz a desigualdade e permite que agricultores acessem mercados, informação e educação.</p>
+            </div>
+            <div class="future-card-tag">Política pública</div>
+          </article>
+
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--gold-light)" opacity="0.4"/>
+                  <circle cx="26" cy="20" r="7" fill="var(--gold)" opacity="0.8"/>
+                  <path d="M14,40 C14,32 38,32 38,40Z" fill="var(--earth-mid)" opacity="0.7"/>
+                  <path d="M8,38 C8,32 18,30 22,32" fill="var(--earth-light)" opacity="0.5"/>
+                </svg>
+              </div>
+              <h3>Intercâmbio Escola-Campo</h3>
+              <p>Programas que levam estudantes urbanos a visitar fazendas e recebem jovens rurais nas cidades criam empatia mútua e aprendizado real.</p>
+            </div>
+            <div class="future-card-tag">Educação</div>
+          </article>
+
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--terra-light)" opacity="0.4"/>
+                  <rect x="14" y="28" width="24" height="12" rx="2" fill="var(--earth-mid)" opacity="0.7"/>
+                  <path d="M18,28 C18,20 26,16 26,16 C26,16 34,20 34,28" fill="var(--green-mid)"/>
+                  <path d="M22,28 C22,22 26,18 26,18" stroke="var(--green-dark)" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <h3>Hortas Urbanas</h3>
+              <p>Transformar terrenos baldios e telhados em hortas comunitárias produz alimentos, educa sobre o campo e cria laços entre vizinhos.</p>
+            </div>
+            <div class="future-card-tag">Comunidade</div>
+          </article>
+
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--green-light)" opacity="0.4"/>
+                  <path d="M10 28 L20 28 L20 24 L30 30 L20 36 L20 32 L10 32Z" fill="var(--earth-mid)"/>
+                  <path d="M42 24 L32 24 L32 20 L22 26 L32 32 L32 28 L42 28Z" fill="var(--green-mid)"/>
+                </svg>
+              </div>
+              <h3>Logística Verde</h3>
+              <p>Investir em infraestrutura de transporte e armazenamento reduz o desperdício de alimentos — hoje, 30% da produção se perde no caminho.</p>
+            </div>
+            <div class="future-card-tag">Infraestrutura</div>
+          </article>
+
+          <article class="future-card" tabindex="0" aria-expanded="false">
+            <div class="future-card-front">
+              <div class="future-icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52">
+                  <circle cx="26" cy="26" r="24" fill="var(--blue-light)" opacity="0.4"/>
+                  <circle cx="26" cy="26" r="12" fill="none" stroke="var(--blue-mid)" stroke-width="2.5"/>
+                  <path d="M20 26 L24 30 L32 22" stroke="var(--blue-dark)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Certificação Orgânica</h3>
+              <p>Valorizar e consumir produtos certificados estimula práticas mais saudáveis e garante renda justa ao produtor que cuida do meio ambiente.</p>
+            </div>
+            <div class="future-card-tag">Consumo</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. CONTATO ===== -->
+    <section class="section contato" id="contato" aria-labelledby="cont-titulo">
+      <div class="container">
+        <span class="section-eyebrow">Fale Conosco</span>
+        <h2 id="cont-titulo" class="section-title">Contato</h2>
+        <p class="section-desc">Tem uma ideia, sugestão ou quer colaborar com o projeto? Envie uma mensagem!</p>
+
+        <div class="contato-wrap">
+          <div class="contato-info" aria-label="Informações de contato">
+            <div class="contato-info-item">
+              <div class="contato-info-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="var(--green-mid)"/></svg>
+              </div>
+              <div>
+                <strong>Localização</strong>
+                <span>Brasil — Campo e Cidade</span>
+              </div>
+            </div>
+            <div class="contato-info-item">
+              <div class="contato-info-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="var(--green-mid)"/></svg>
+              </div>
+              <div>
+                <strong>E-mail</strong>
+                <span>contato@campocidade.edu.br</span>
+              </div>
+            </div>
+            <div class="contato-info-item">
+              <div class="contato-info-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="var(--green-mid)"/></svg>
+              </div>
+              <div>
+                <strong>Projeto Educativo</strong>
+                <span>Ensino Médio / Fundamental II</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contato-form" id="contatoForm" novalidate aria-label="Formulário de contato">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome <span aria-hidden="true">*</span></label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" autocomplete="name" required aria-required="true" aria-describedby="nome-error"/>
+              <span class="form-error" id="nome-error" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" autocomplete="email" required aria-required="true" aria-describedby="email-error"/>
+              <span class="form-error" id="email-error" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-group">
+              <label for="assunto" class="form-label">Assunto <span aria-hidden="true">*</span></label>
+              <select id="assunto" name="assunto" class="form-input" required aria-required="true" aria-describedby="assunto-error">
+                <option value="">Selecione um assunto</option>
+                <option value="sugestao">Sugestão de conteúdo</option>
+                <option value="parceria">Parceria educacional</option>
+                <option value="erro">Reportar um erro</option>
+                <option value="outro">Outro</option>
+              </select>
+              <span class="form-error" id="assunto-error" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Mensagem <span aria-hidden="true">*</span></label>
+              <textarea id="mensagem" name="mensagem" class="form-input form-textarea" placeholder="Escreva sua mensagem aqui..." required aria-required="true" aria-describedby="mensagem-error" rows="5"></textarea>
+              <span class="form-error" id="mensagem-error" role="alert" aria-live="assertive"></span>
+            </div>
+            <button type="submit" class="form-submit">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21L23 12 2 3v7l15 2-15 2z" fill="currentColor"/></svg>
+              Enviar Mensagem
+            </button>
+            <div class="form-success" id="formSuccess" role="alert" style="display:none">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="var(--green-mid)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+              Mensagem enviada com sucesso! Obrigado pelo contato.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo footer-logo" aria-label="Campo e Cidade - Início">
+            <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+              <path d="M18 4 C10 4 4 12 6 20 C8 26 14 30 18 32 C22 30 28 26 30 20 C32 12 26 4 18 4Z" fill="var(--green-mid)" opacity="0.85"/>
+              <rect x="14" y="16" width="8" height="16" rx="1" fill="var(--earth-dark)" opacity="0.9"/>
+              <rect x="15" y="18" width="2" height="3" rx="0.5" fill="var(--gold)"/>
+              <rect x="19" y="18" width="2" height="3" rx="0.5" fill="var(--gold)"/>
+            </svg>
+            <span>Campo &amp; Cidade</span>
+          </a>
+          <p class="footer-tagline">A natureza e a inovação caminham juntas quando escolhemos cooperar.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#conexao">A Conexão</a></li>
+            <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Mais seções">
+          <h4>Mais</h4>
+          <ul>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#futuro">Futuro</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-message">
+          <h4>Desenvolvimento Sustentável</h4>
+          <p>Este projeto apoia os Objetivos de Desenvolvimento Sustentável da ONU, especialmente o ODS 2 (Fome Zero), ODS 11 (Cidades Sustentáveis) e ODS 15 (Vida Terrestre).</p>
+          <div class="footer-ods" aria-label="Objetivos de Desenvolvimento Sustentável">
+            <span class="ods-badge ods-2">ODS 2</span>
+            <span class="ods-badge ods-11">ODS 11</span>
+            <span class="ods-badge ods-15">ODS 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Campo &amp; Cidade — Projeto Educativo. Desenvolvido com propósito e cuidado pelo planeta.</p>
+        <p class="footer-credits">Conteúdo criado para fins educacionais. Dados baseados em fontes públicas como Embrapa, Conab e FAO.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo da página" style="opacity:0; pointer-events:none">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
